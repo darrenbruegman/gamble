@@ -79,9 +79,15 @@ function choose(num) {
   }
   .red {
     background-color: red;
+    color: white;
   }
   .black {
     background-color: black;
+    color: white;
+  }
+  .green {
+    background-color: darkgreen;
+    color: white;
   }
 </style>
 
@@ -90,6 +96,7 @@ function choose(num) {
   <h1 id="balance">20</h1>
   <table>
     <tr>
+      <td colspan=3><button onclick="choose(0)" class="green">3</button></td>
       <td><button onclick="choose(3)" class="red">3</button></td>
       <td><button onclick="choose(6)" class="black">6</button></td>
       <td><button onclick="choose(9)" class="red">9</button></td>
