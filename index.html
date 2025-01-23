@@ -18,7 +18,7 @@ function random(min,max) {
 }
 function spin() {
   number = random(0, 37);
-  var x = alert("the wheel spun " + number "!")
+  var x = window.alert("the wheel spun " + number "!")
   for (i in chosenNum) {
     balance = balance - 1
     if (i == number) {
@@ -68,23 +68,23 @@ balance = balance + profit;
 
 function choose(num) {
   chosenNum.push(num)
-  var x = alert(num)
+  var x = window.alert(num)
 }
 function setEven() {
   evenFlag = true
-  var x = alert(evenFlag)
+  var x = window.alert(evenFlag)
 }
 function setOdd() {
   oddFlag = true
-  var x = alert(oddFlag)
+  var x = window.alert(oddFlag)
 }
 function setBlack() {
   blackFlag = true
-  var x = alert(blackFlag)
+  var x = window.alert(blackFlag)
 }
 function setRed() {
   redFlag = true
-  var x = alert(redFlag)
+  var x = window.alert(redFlag)
 }
 
 </script>
