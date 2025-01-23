@@ -1,0 +1,72 @@
+<html>
+<head>
+<script>
+var balance = 20
+var profit;
+var number;
+var chosenNum = []
+var blackFlag;
+var redFlag;
+var evenFlag;
+var oddFlag;
+var redNum = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]
+var blackNum = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35]
+var oddNum = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35]
+var evenNum = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36]
+function random(min,max) {
+  return Math.floor((Math.random())*(max-min+1))+min;
+}
+function spin() {
+  number = random(0, 37);
+  var x = alert("the wheel spun " + number "!")
+  for (i in chosenNum) {
+    balance = balance - 1
+    if (i == number) {
+      profit = profit +1;
+    }
+  }
+if (blackFlag == true) {
+  balance = balance - 1
+  for (i in blackNum) {
+    if (i == number) {
+      profit = profit +1;
+    }
+  }
+}
+if (redFlag == true) {
+  balance = balance - 1
+  for (i in redNum) {
+    if (i == number) {
+      profit = profit +1;
+    }
+  }
+}
+if (oddFlag == true) {
+  balance = balance - 1
+  for (i in oddNum) {
+    if (i == number) {
+      profit = profit +1;
+    }
+  }
+}
+if (evenFlag == true) {
+  balance = balance - 1
+  for (i in evenNum) {
+    if (i == number) {
+      profit = profit +1;
+    }
+  }
+}
+balance = balance + profit;
+  blackFlag = false
+  redFlag = false
+  evenFlag = false
+  oddFlag = false
+  chosenNum = []
+  document.getElementById('balance').innerHTML = balance;
+}
+</script>
+</head>
+<body>
+  <h1 id="balance">20</h1>
+</body>
