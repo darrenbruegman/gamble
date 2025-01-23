@@ -65,8 +65,28 @@ balance = balance + profit;
   chosenNum = []
   document.getElementById('balance').innerHTML = balance;
 }
+
+function choose(num) {
+  chosenNum.push(num)
+}
 </script>
+
+<style>
+  body {
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  .red {
+    background-color: red;
+  }
+  .black {
+    background-color: black;
+  }
+</style>
+
 </head>
 <body>
   <h1 id="balance">20</h1>
+  <button onclick="choose(1)" class="red">1</button>
 </body>
